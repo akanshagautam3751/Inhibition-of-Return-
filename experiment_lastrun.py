@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on April 01, 2020, at 17:24
+    on April 01, 2020, at 20:48
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -401,7 +401,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=5, method='random', 
+trials = data.TrialHandler(nReps=2, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('image_stimuli.xlsx'),
     seed=None, name='trials')
@@ -670,7 +670,7 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *imageTrialTarget_1* updates
-        if imageTrialTarget_1.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
+        if imageTrialTarget_1.status == NOT_STARTED and tThisFlip >= startTime-frameTolerance:
             # keep track of start time/frame for later
             imageTrialTarget_1.frameNStart = frameN  # exact frame index
             imageTrialTarget_1.tStart = t  # local t and not account for scr refresh
@@ -678,8 +678,8 @@ for thisTrial in trials:
             win.timeOnFlip(imageTrialTarget_1, 'tStartRefresh')  # time at next scr refresh
             imageTrialTarget_1.setAutoDraw(True)
         if imageTrialTarget_1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > imageTrialTarget_1.tStartRefresh + 0.20-frameTolerance:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > endTime-frameTolerance:
                 # keep track of stop time/frame for later
                 imageTrialTarget_1.tStop = t  # not accounting for scr refresh
                 imageTrialTarget_1.frameNStop = frameN  # exact frame index
@@ -687,7 +687,7 @@ for thisTrial in trials:
                 imageTrialTarget_1.setAutoDraw(False)
         
         # *imageTrialTarget_2* updates
-        if imageTrialTarget_2.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
+        if imageTrialTarget_2.status == NOT_STARTED and tThisFlip >= startTime-frameTolerance:
             # keep track of start time/frame for later
             imageTrialTarget_2.frameNStart = frameN  # exact frame index
             imageTrialTarget_2.tStart = t  # local t and not account for scr refresh
@@ -695,8 +695,8 @@ for thisTrial in trials:
             win.timeOnFlip(imageTrialTarget_2, 'tStartRefresh')  # time at next scr refresh
             imageTrialTarget_2.setAutoDraw(True)
         if imageTrialTarget_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > imageTrialTarget_2.tStartRefresh + 0.20-frameTolerance:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > endTime-frameTolerance:
                 # keep track of stop time/frame for later
                 imageTrialTarget_2.tStop = t  # not accounting for scr refresh
                 imageTrialTarget_2.frameNStop = frameN  # exact frame index
@@ -704,7 +704,7 @@ for thisTrial in trials:
                 imageTrialTarget_2.setAutoDraw(False)
         
         # *imageTrialTarget_3* updates
-        if imageTrialTarget_3.status == NOT_STARTED and tThisFlip >= 0.05-frameTolerance:
+        if imageTrialTarget_3.status == NOT_STARTED and tThisFlip >= startTime-frameTolerance:
             # keep track of start time/frame for later
             imageTrialTarget_3.frameNStart = frameN  # exact frame index
             imageTrialTarget_3.tStart = t  # local t and not account for scr refresh
@@ -712,8 +712,8 @@ for thisTrial in trials:
             win.timeOnFlip(imageTrialTarget_3, 'tStartRefresh')  # time at next scr refresh
             imageTrialTarget_3.setAutoDraw(True)
         if imageTrialTarget_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > imageTrialTarget_3.tStartRefresh + 0.20-frameTolerance:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > endTime-frameTolerance:
                 # keep track of stop time/frame for later
                 imageTrialTarget_3.tStop = t  # not accounting for scr refresh
                 imageTrialTarget_3.frameNStop = frameN  # exact frame index
@@ -722,7 +722,7 @@ for thisTrial in trials:
         
         # *keyResponse* updates
         waitOnFlip = False
-        if keyResponse.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if keyResponse.status == NOT_STARTED and tThisFlip >= startTime-frameTolerance:
             # keep track of start time/frame for later
             keyResponse.frameNStart = frameN  # exact frame index
             keyResponse.tStart = t  # local t and not account for scr refresh
@@ -850,12 +850,12 @@ for thisTrial in trials:
     trials.addData('textBlank500.stopped', textBlank500.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 5 repeats of 'trials'
+# completed 2 repeats of 'trials'
 
 
 # ------Prepare to start Routine "EndScreen"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(20.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 EndScreenComponents = [textEndSceen]
@@ -891,7 +891,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         textEndSceen.setAutoDraw(True)
     if textEndSceen.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > textEndSceen.tStartRefresh + 2.0-frameTolerance:
+        if tThisFlipGlobal > textEndSceen.tStartRefresh + 20-frameTolerance:
             # keep track of stop time/frame for later
             textEndSceen.tStop = t  # not accounting for scr refresh
             textEndSceen.frameNStop = frameN  # exact frame index
