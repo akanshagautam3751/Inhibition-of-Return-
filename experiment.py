@@ -84,9 +84,9 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "WelcomeScreen"
 WelcomeScreenClock = core.Clock()
 textWelcome = visual.TextStim(win=win, name='textWelcome',
-    text='Welcome to the experiment.\n\n1. Please look at the central box. \n2. Respond to the target as quickly as possible by pressing the space key.  ',
+    text='Welcome to the experiment.\n\n1. Please look at the central box. \n2. Respond to the target as quickly as possible by pressing the space key. \n3. There could be cases when the target wont present at all, press the space key to continue in such cases. ',
     font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
